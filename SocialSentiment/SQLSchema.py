@@ -22,6 +22,7 @@ class SocialSentimentSchema():
         self.cursor.execute("CREATE TABLE finnhub("
                             "sentiment_id INT IDENTITY(1,1) PRIMARY KEY,"
                             "date DATETIME NOT NULL,"
+                            "source VARCHAR(10) NOT NULL,"
                             "symbol VARCHAR(5) NOT NULL,"
                             "mention INTEGER,"
                             "positive_score DECIMAL(10,6),"
